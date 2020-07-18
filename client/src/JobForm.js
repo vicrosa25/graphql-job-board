@@ -7,8 +7,7 @@ export const JobForm = (props) => {
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
-    const companyId = "SJV0-wdOM"; // FIXME
-    const job = await createJob({ companyId, title, description });
+    const job = await createJob({ title, description });
     props.history.push(`/jobs/${job.id}`);
   };
 
